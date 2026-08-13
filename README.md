@@ -91,12 +91,12 @@ Data Science & AI student at BUas with hands-on project experience across machin
 ### Plant Phenotyping CV Platform | MLOps & Cloud Deployment
 *Group project · Built on our earlier NPEC-related computer vision work*
  
-A CV system that segments plant shoots and roots from images and extracts root-tip coordinates, deployed and continuously retrained across local, on-premise, and cloud environments. I was responsible for endpoint deployment and blue-green deployment on Azure (so new model versions ship with zero downtime), co-authored the project roadmap, and helped build the Docker/Docker Compose setup, the CI/CD pipeline, and the MinIO ↔ Azure Blob Storage integration.
+A CV system that segments plant shoots and roots from images and extracts root-tip coordinates, deployed and continuously retrained across local, on-premise, and cloud environments. I was responsible for endpoint deployment and blue-green deployment on Azure (so new model versions ship with zero downtime), co-authored the project roadmap, and helped build the Docker/Docker Compose setup, the CI/CD pipeline, and the MinIO - Azure Blob Storage integration.
  
-- Built a CI/CD pipeline (GitHub Actions → GitHub Container Registry) publishing one set of container images that run **unmodified** across local, on-premise, and Azure Container Apps — no separate versions per environment, just different environment variables
-- Set up **blue-green deployment on Azure** so new model versions go live with no downtime
+- Built a CI/CD pipeline (GitHub Actions -> GitHub Container Registry) publishing one set of container images that run unmodified across local, on-premise, and Azure Container Apps — no separate versions per environment, just different environment variables
+- Set up blue-green deployment on Azure so new model versions go live with no downtime
 - Implemented closed-loop retraining: the system retrains weekly on real usage data — user-confirmed correct predictions feed straight back into the training set, wrong ones go to professionals for manual labeling first
-- Each new model is evaluated against a held-out test set and **only replaces the current one in production if it actually scores better**
+- Each new model is evaluated against a held-out test set and only replaces the current one in production if it actually scores better
 - Set up test coverage gating in CI (70% minimum)
  
 **Stack:**
@@ -117,8 +117,8 @@ A CV system that segments plant shoots and roots from images and extracts root-t
  
 Built a full CV-to-control pipeline for a simulated Opentrons OT-2 lab robot: U-Net segmentation and skeletonization detect plant root tips, then a controller guides the pipette to each one with sub-millimeter precision.
  
-- Benchmarked PPO (reinforcement learning) against a custom-tuned PID controller — PID won on results (**99.7% vs. 40% success rate**)
-- Achieved **96% end-to-end success** across 10 simulated test plates
+- Benchmarked PPO (reinforcement learning) against a custom-tuned PID controller — PID won on results (99.7% vs. 40% success rate)
+- Achieved 96% end-to-end success across 10 simulated test plates
 
 **Stack:**
 ![PyBullet](https://img.shields.io/badge/PyBullet-4B8BBE?style=flat-square)
@@ -136,10 +136,10 @@ Built a full CV-to-control pipeline for a simulated Opentrons OT-2 lab robot: U-
 ### Ukrainian Video Emotion Classification | NLP Pipeline
 *Group project · Built for [Content Intelligence Agency](https://www.contentintelligence.nl/), which builds AI tools for media makers to analyze film, TV, and video content*
  
-Full pipeline: Ukrainian-language video in → transcription → translation → emotion tagged per sentence → output file. My part was the emotion classification stage and the full error analysis.
+Full pipeline: Ukrainian-language video in -> transcription -> translation -> emotion tagged per sentence -> output file. My part was the emotion classification stage and the full error analysis.
  
-- Fine-tuned a Ukrainian RoBERTa transformer for 7-class emotion classification — genuinely underexplored territory, since labeled Ukrainian emotion data is extremely scarce
-- Solved data scarcity by generating synthetic training data with a local LLM as a team, iterating past a naive first attempt that didn't match the real data's style — scaling the dataset from **48K to 556K sequences**
+- Fine-tuned a Ukrainian RoBERTa transformer for 7-class emotion classification: genuinely underexplored territory, since labeled Ukrainian emotion data is extremely scarce
+- Solved data scarcity by generating synthetic training data with a local LLM as a team, iterating past a naive first attempt that didn't match the real data's style — scaling the dataset from 48K to 556K sequences
 - Model reached 78% accuracy (weighted F1 = 0.79), but my error analysis caught that this was actually just below a naive "always predict Neutral" baseline (macro F1 = 0.39) — a distinction that's easy to miss and easy to hide. Surfacing it, and diagnosing exactly why it happened, was what made our team's presentation stand out
 - Authored a full model card covering ethics, PII masking, and a quantified carbon-footprint analysis
   
@@ -160,7 +160,7 @@ Full pipeline: Ukrainian-language video in → transcription → translation →
 Designed and ran a statistically rigorous benchmark of 5 tip-tracking methods against a single-frame baseline on real plant time-series data.
  
 - Applied repeated-measures ANOVA with Bonferroni correction across methods
-- Found **no significant accuracy improvement** from temporal tracking (Hedges' g = 0.017) — a validated null result that redirected the team's engineering priorities
+- Found no significant accuracy improvement from temporal tracking (Hedges' g = 0.017) — a validated null result that redirected the team's engineering priorities
   
 **Stack:**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
