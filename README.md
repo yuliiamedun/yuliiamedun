@@ -2,7 +2,7 @@
 
 Data Science & AI student at BUas with hands-on project experience across machine learning, deep learning, computer vision, NLP, and MLOps. Seeking an internship in data science or machine learning to apply these skills to real-world problems and keep learning.
 
-**Contact Info:** [LinkedIn](https://www.linkedin.com/in/yuliia-medun-a2408233a/) ·  [Email](julm4364@gmail.com)
+**Contact Info:** [LinkedIn](https://www.linkedin.com/in/yuliia-medun-a2408233a/) ·  [Email](yuliiamedun@gmail.com)
 
 ---
 
